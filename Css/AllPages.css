@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+#container-hamburguer{
+    display: none;
+}
+header {
+    background-color: #00904C;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(135deg, #00904C, rgba(0, 144, 76, 0.85));
+    box-shadow: 0 8px 20px rgba(0, 144, 76, 0.3);
+    border-bottom: 3px solid rgba(0, 144, 76, 0.6);
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  transform: rotate(25deg);
+  pointer-events: none;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    max-width: 99px;
+}
+
+.redes-sociais-imagens {
+    width: 42px;
+    height: 42px;
+    margin-right: 5px;
+}
+
+.redes-sociais-imagens a {
+    color: white;
+    font-size: 22px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.redes-sociais-imagens a:hover {
+    transform: translateY(-3px);
+}
+
+.redes-sociais-header {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  width: 150px;
+}
+
+.textos-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.textos-da-header {
+    font-family: "Red Hat Display", sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.textos-da-header a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+
+.textos-da-header a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo-agrobeloni-header {
+    margin: 0 30px 0 8%;
+    display: flex;
+    align-items: center;
+}
+.logo-coluna{
+  margin-left: 35px;
+}
+
+/* --------- mobile --------------- */
+
+@media screen and (max-width: 1024px) {
+    body{
+        overflow-x: hidden;
+    }
+    header::before {
+  content: none;
+}
+  header{
+    justify-content: flex-start;
+    overflow: visible;
+  }
+    .logo-agrobeloni-header {
+    margin: 0;
+    justify-content: center;
+    width: 100%;
+}
+    header .logo{
+        width: 100%;
+        height: 100%;
+        user-select: none;
+    }
+    header #container-hamburguer{
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    header .textos-header{
+        flex-flow: column nowrap;
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        right: -100%;
+        top: 100px;
+        opacity: 0;
+        row-gap: 1px;
+        padding: 1px 0;
+        transition: 0.3s;
+        display: none;
+    }
+    header .textos-da-header{
+        background-color: #00904C;
+        width: 100%;
+        text-align: center;
+    }
+    header .textos-da-header a{
+      width: 100%;
+    }
+    header .textos-da-header a:hover {
+    transform: scale(1.05);
+    }
+  
+    header .redes-sociais-header{
+        position: absolute;
+        top: 346px;
+        background-color: #00904C;
+        width: 100%;
+        margin: 0;
+        height: 80px;
+        right: -100%;
+        opacity: 0;
+
+        transition: 0.3s;
+        display: none;
+    }
+    header .redes-sociais-header:last-child:after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    height: 1px;
+    background-color:white; 
+    }
+    header .on{     
+        display: flex;
+      
+        left: 0;
+        opacity: 1;
+        justify-content: center;
+          transition: 0.3s;
+    }
+}
+/*         footer             */ 
+.footer-agrobeloni{
+  background-color: #00904C;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  background: linear-gradient(135deg, #00904C, rgba(0, 144, 76, 0.85));
+  box-shadow: 0 8px 20px rgba(0, 144, 76, 0.3);
+  border-bottom: 3px solid rgba(0, 144, 76, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+/* efeito de brilho */
+.footer-agrobeloni::before{
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  transform: rotate(50deg);
+  pointer-events: none;
+}
+
+/* conteúdo interno */
+.footer-conteudo{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+.footer-logo{
+  width: 100%;
+  height: 100%;
+}
+
+/* links */
+.footer-coluna{
+  margin-left: 60px;
+  color: white;
+  font-family: "Sansation";
+}
+
+.footer-coluna h3{
+  font-weight: bold;
+}
+
+.footer-links a{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-decoration: underline;
+}
+.footer-links li{
+  list-style-type: none;
+}
+
+/* textos */
+.letras-footer p{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-left: 40px;
+  font-family: "Sansation";
+}
+
+.parte-palavras-footer{
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+#endereco{
+  font-weight: bold;
+  margin-top: 0;
+}
+#endereco-footer{
+  width: 300px;
+}
+#endereco-footer p{
+  margin-top: 4%;
+}
+#social-coluna{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Sansation";
+  font-weight: bold;
+  margin-left: 30%;
+  margin-bottom: 160px;
+  width: 140px;
+}
+.footer-social-icons{
+  display: flex;
+}
+
+.footer-social-icons a{
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-social-icons a:hover{
+  transform: translateY(-3px);
+}
+
+ .footer-logo-centralizada{
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+@media (max-width: 1024px) {
+  .footer-logo-centralizada{
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  }
+  #social-coluna {
+    margin: auto;
+}
+  
+.footer-logo{
+  width: auto;
+  height: auto;
+}
+   .footer-logo-centralizada{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  }
+     .redes-sociais-footer-div {
+    margin-left: 100px;
+  }
+  .footer-agrobeloni{
+    height: auto;
+  }
+  .footer-conteudo{
+    flex-direction: column;
+    margin: auto;
+    
+  }
+  
+
+    #endereco-footer{
+    margin-top: 20px;
+  }
+    .redes-sociais-footer-div {
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+  #social-coluna{
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+}

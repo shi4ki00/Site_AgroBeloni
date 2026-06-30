@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+body {
+    font-family: 'Arial', sans-serif; /* Ou a fonte que você usou no Figma */
+    color: #555;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-cultures {
+    width: 100%;
+    height: calc(100vh - 100px);
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                url('../Page Culturas/Imagens/Culturas/Culturas\ -\ IMG.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-cultures h1 {
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.content-section {
+    padding: 80px 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "imagem titulo"
+        "imagem texto";
+    column-gap: 50px;
+    align-items: center;
+    }
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+.image-box{
+    grid-area: imagem;
+}
+.text-box .subtitulo{
+     grid-area: title;
+
+}
+.text-box {
+     grid-area: texto;
+
+}
+
+ h2 {
+    color: #8B3E2F; 
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+ h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #82B4A1; 
+}
+
+.text-box p {
+    font-size: 0.95rem;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.cultures-grid-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.section-header {
+    margin-bottom: 50px;
+}
+
+
+.btn-next, .btn-previous{
+        display: none;
+    }
+.cultures-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; 
+}
+
+.culture-card {
+    background-color: #C0C0C0; 
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    color: #006400; 
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.card-content p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: left;
+    
+}
+
+
+.logo-coluna {
+    flex: 1.5; /* A coluna do logo é um pouco mais larga */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+/*  --------------------   moba -----------------------*/
+
+@media screen and (max-width: 768px) {
+    main .content-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "imagem"
+      "texto";
+    row-gap: 10px;
+    }
+    main .image-box img {
+        width: 80%;
+        margin: auto;
+    }
+
+
+    main #culturas{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 5px;
+    }
+    .btn-next, .btn-previous{
+        width: 35px;
+        height: 35px;
+        display: block;
+        cursor: pointer;
+    }
+    .btn-next img:hover, .btn-previous img:hover{
+        transform: scale(1.06);
+        filter: drop-shadow(-1px -2px 4px #00000056);
+        transition: 0.3s;
+    }
+    .btn-previous{
+        transform: rotate(-180deg);
+    }
+     .btn-next img, .btn-previous img{
+        width: 100%;
+        height: 100%;
+        transition: 0.2s;
+    }
+    main .cultures-grid {
+        display: block;
+        height:  500px;
+        position: relative;
+        width: 100%;
+        width: 80%;
+        margin: auto;
+    }
+    .culture-card{
+        width: 100%;
+       position: absolute;
+        transition: 0.4s;
+        opacity: 0;
+
+      
+    }
+    .card-on{
+        opacity: 1;
+          transition: 0.4s;
+    }
+
+}

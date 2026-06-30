@@ -1,0 +1,248 @@
+
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+/* ================= SECTION 1: HERO ================= */
+.secao-cafe-e-turismo {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px);
+    min-height: 400px;
+    background-image: url('../Imgs/Cafe-e-Turismo/image 11.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.parte-escura {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#texto-cafe-e-turismo {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#texto-cafe-e-turismo h1 {
+    font-family: "Sansation";
+    font-weight: bold;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+
+/* ================= SECTION 2 ================= */
+.secao-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.imagem-folhas-de-cafe {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.textos-secao-2 {
+    flex: 1 1 500px;
+    padding-left: 40px;
+    max-width: 800px;
+}
+
+.linha-verde {
+    width: 100%;
+    border: 0;
+    border-top: 3px solid #00904C;
+    margin: 15px 0 25px 0;
+}
+
+.titulos-vermelhos h2 {
+    font-family: "Sansation";
+    font-size: 32px;
+    color: #7B2800;
+    font-weight: 400;
+}
+
+.texto-secao-2 {
+    color: #666666;
+    font-size: 20px;
+    font-family: "Sansation";
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* ================= SECTION 3 ================= */
+.secao-3 {
+    background-color: #537465;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 60px 20px;
+    justify-content: center;
+}
+
+.textos-secao-3 {
+    flex: 1 1 400px;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.titulo-cafe-e-turismo h1 {
+    font-size: 32px;
+    font-family: "Sansation";
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.texto-secao-3 {
+    font-family: "Sansation";
+    color: white;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.imagem-secao-3 {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ================= SECTION 4 ================= */
+.secao-4 {
+    padding: 60px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.parte-1-secao-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.mapa-brasil {
+    flex: 1 1 300px;
+    max-width: 500px;
+}
+
+.texto-pequeno {
+    color: #666666;
+    font-family: "Sansation";
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.texto-secao-4 {
+    flex: 1 1 400px;
+    max-width: 600px;
+    font-size: 20px;
+    font-family: "Sansation";
+    line-height: 1.6;
+    text-align: justify;
+    color: #666666;
+    margin-top: 20px;
+}
+
+.parte-2-secao-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+.parte-selos {
+    flex: 1 1 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.parte-selos img {
+    max-height: 80px;
+    width: auto;
+}
+
+.parte-icones-letras {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imagem-letra-mapa {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.imagem-letra-mapa img {
+    width: 50px;
+}
+
+.imagem-letra-mapa h2 {
+    color: #7B2800;
+    font-family: "Sansation";
+    font-size: 18px;
+}
+
+
+/* ================= MEDIA QUERIES (RESPONSIVIDADE) ================= */
+
+@media (max-width: 1024px) {
+    .secao-2 { padding: 40px 20px; }
+    .textos-secao-2 { padding-left: 0; margin-top: 30px; }
+}
+
+@media (max-width: 768px) {
+    /* TIPOGRAFIA E ESPAÇAMENTOS MOBILE */
+    #texto-cafe-e-turismo h1 { font-size: 36px; }
+    
+    .secao-2 { padding: 30px 20px; }
+    .imagem-folhas-de-cafe { margin-bottom: 20px; }
+    .titulos-vermelhos h2 { font-size: 24px; text-align: center; }
+    .texto-secao-2 { font-size: 16px; text-align: left; }
+    
+    .secao-3 { padding: 40px 20px; }
+    .titulo-cafe-e-turismo h1 { font-size: 24px; }
+    .texto-secao-3 { font-size: 16px; text-align: left; }
+    
+    .parte-1-secao-4 { gap: 20px; }
+    .texto-secao-4 { font-size: 16px; text-align: left; margin-top: 0; }
+    
+    .imagem-letra-mapa {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+}
